@@ -5,10 +5,12 @@
 {% block content %}
 <h1>New Product</h1>
 <br>
+
 <form action="/market/add_product" method = "POST">
     <input type="text" class="form-control col-sm-7 btn-light" name="name" placeholder="Name" aria-label="Name" required>
     <br>
     <input type="text" class="form-control col-sm-7 btn-light" name="barcode" placeholder="Barcode" aria-label="Barcode" required>
+    {% if barcode_pattern == False %} <script>alert('Invalid Barcode')</script> {% endif %}
     <br>
     <input type="text" class="form-control col-sm-7 btn-light" name="price" placeholder="Price" aria-label="Price" required>
     <br>

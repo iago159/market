@@ -1,7 +1,7 @@
 from flask import Flask, render_template, redirect, request
 from flask_mysqldb import MySQL
 import MySQLdb
-
+import re
 
 app = Flask(__name__)
 
@@ -35,10 +35,12 @@ def new_product():
 
     if request.method == 'POST':
         name = request.form['name']
-        barcode = request.form['barcode']
+        barcode = str(request.form['barcode']).strip()
         price = request.form['price']
         description = request.form['description']
-
+        barcode_pattern = r'^[0-9]{10}$'
+        if not re.match(barcode_pattern, barcode):
+            return render_template('addproduct.html', barcode_pattern=False)
         cur = mysql.connection.cursor()
         sql = '''INSERT INTO items(name, barcode, price, description) 
         VALUES (%s, %s, %s, %s)'''
