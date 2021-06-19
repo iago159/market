@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<body class='text-center'>
+    <h1>Login</h1>
+    <br>
+    <form class="col-md-6 offset-md-3" action="/login" method = "POST">
+        <label for="username">Username</label>
+        <input type="text" class="form-control col-sm-6 offset-md-3 btn-light" name="username" id="username" placeholder="Username" aria-label="Username" required>
+        <label for="password">Password</label>
+        <input type="password" class="form-control col-sm-6 offset-md-3 btn-light" name="password" id="password" placeholder="Password" aria-label="Password" required>
+        <br>
+        <div style="color: rgb(255, 155, 155); margin-top: -10px; margin-bottom: 10px;"
+        class="msg"> {{ msg }} </div>
+        <input type = "submit" class='btn btn-success col-sm-2' value = "Login" />
+     </form>
+</body>
+ {% endblock %}
