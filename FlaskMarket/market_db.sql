@@ -78,11 +78,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `email`, `budget`) VALUES
-(1, 'oioi', 'Aaaaaaaaa11', 'teste@gmail.com', '0.00'),
-(2, '20171010870304', 'Aaaaaaaaaa1', 'iagoago@jota.com', '0.00'),
-(3, 'iago159aa', 'A1112121212aa', 'iago1591@hotmail.com', '0.00'),
-(4, '06301462173a', 'Aaaa12121234a', 'josiasago31@gmail.com', '0.00'),
-(5, '1212', 'Iago1234', 'email@dominio.com', '1000.00');
+(1, 'test', 'password001', 'test@gmail.com', '0.00'),
+(2, 'myusername', 'mypassword', 'helloworld@hotmail.com', '0.00'),
 
 --
 -- Índices para tabelas despejadas
