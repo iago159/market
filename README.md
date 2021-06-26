@@ -3,7 +3,7 @@
 
 # About
 
-This fictitious market is an application built mainly with Python and Flask framework, establishing a database (MySQL) connection. Attention: The application isn't complete yet
+This fictitious market is an application built mainly with Python and Flask framework, establishing a database (MySQL) connection. There are more things to do in this application, feel free to do if you want, but I won't do because I have already reached my goals with this project :)
 
 # Technologies 
 
